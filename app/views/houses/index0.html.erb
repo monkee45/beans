@@ -1,0 +1,45 @@
+<h1>
+  <% if @cafes.size > 1 %>
+    <%= @cafes.size %> Cafes
+  <% else %>
+    <%= @cafes.size %> Cafe
+  <% end %>
+
+<% @cafes.each do |cafe| %>
+  <article class="cafe">
+    <header>
+      <%= image_for(cafe) %>
+      <h2><%= link_to(cafe.name, house_path(cafe)) %></h2>
+    </header>
+    <p>
+      <%= truncate(cafe.description, length: 40, separator: ' ') %>
+    </p>
+    <table>
+      <tr>
+        <th>Address:</th>
+        <td><%= cafe.address %></td>
+      </tr>
+      <tr>
+        <th>Website:</th>
+        <td><%= link_to(cafe.website) %></td>
+      </tr>
+      <tr>
+        <th>Owner:</th>
+        <td><%= cafe.owner %></td>
+      </tr>
+      <tr>
+        <th>Capacity:</th>
+        <td><%= cafe.capacity %> Persons</td>
+      </tr>
+      <tr>
+        <th>Category:</th>
+        <td><%= format_cafe_category(cafe) %> </td>
+      </tr>
+      <tr>
+        <th>Status:</th>
+        <td><%= cafe.status %> </td>
+      </tr>
+    </table>
+  </article>
+
+<% end %>

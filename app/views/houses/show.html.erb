@@ -1,0 +1,42 @@
+<%= image_for(@cafe) %>
+<h1><%= @cafe.name %></h1>
+
+<article>
+    <p>
+      <%= truncate(@cafe.description, length: 40, separator: ' ') %>
+    </p>
+    <table>
+      <tr>
+        <th>Address:</th>
+        <td><%= @cafe.address %></td>
+      </tr>
+      <tr>
+        <th>Phone:</th>
+        <td><%= @cafe.phone %></td>
+      </tr>
+      <tr>
+        <th>Website:</th>
+        <td><%= link_to(@cafe.website) %></td>
+      </tr>
+      <tr>
+        <th>Owner:</th>
+        <td><%= @cafe.owner %></td>
+      </tr>
+      <tr>
+        <th>Capacity:</th>
+        <td><%= @cafe.capacity %> Persons</td>
+      </tr>
+      <tr>
+        <th>Category:</th>
+        <td><%= format_cafe_category(@cafe) %> </td>
+      </tr>
+      <tr>
+        <th>Status:</th>
+        <td><%= @cafe.status %> </td>
+      </tr>
+    </table>
+  </article>
+<p>
+  <%= link_to('Edit Cafe', edit_house_path(@cafe)) %>
+  <%= link_to 'Delete', house_path(@cafe), method: :delete, data: {confirm: 'Are you sure?'} %>
+</p>

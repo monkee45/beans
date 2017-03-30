@@ -1,0 +1,13 @@
+<aside id="sidebar">
+  <nav>
+    <ul>
+      <li class='houses'>
+        <%= nav_link_to 'All Cafes', houses_path %>
+      </li>
+      <li class='create-house'>
+        <%= nav_link_to 'Add New Cafe', new_house_path %>
+      </li>
+    </ul>
+    <%= content_for(:side) %>
+  </nav>
+</aside>
