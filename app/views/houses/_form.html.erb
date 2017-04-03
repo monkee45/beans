@@ -1,41 +1,45 @@
 <%= form_for(@cafe) do |f| %>
-<p>
-  <%= f.label :name %> <br/>
-  <%= f.text_field :name, autofocus: true %>
-</p>
-<p>
-  <%= f.label :description %> <br/>
-  <%= f.text_field :description %>
-</p>
-<p>
-  <%= f.label :address %> <br/>
-  <%= f.text_field :address %>
-</p>
-<p>
-  <%= f.label :phone %> <br/>
-  <%= f.text_field :phone %>
-</p>
-<p>
-  <%= f.label :website %> <br/>
-  <%= f.text_field :website %>
-</p>
-<p>
-  <%= f.label :owner %> <br/>
-  <%= f.text_field :owner %>
-</p>
-<p>
-  <%= f.label :capacity %> <br/>
-  <%= f.text_field :capacity %>
-</p>
-<p>
-  <%= f.label :status %> <br/>
-  <%= f.text_field :status %>
-</p>
-<p>
-  <%= f.label :image_file_name %> <br/>
-  <%= f.text_field :image_file_name %>
-</p>
-<p>
-  <%= f.submit %> | <%= link_to "Cancel", houses_path %>
-</p>
+  <fieldset>
+    <ol>
+      <li class="required">
+        <%= f.label :name %> <br/>
+        <%= f.text_field :name, autofocus: true %>
+      </li>
+      <li class="required">
+        <%= f.label :description %> <br/>
+        <%= f.text_field :description %>
+      </li>
+      <li class="required">
+        <%= f.label :address %> <br/>
+        <%= f.text_field :address %>
+      </li>
+      <li class="required">
+        <%= f.label :phone %> <br/>
+        <%= f.text_field :phone %>
+      </li>
+      <li class="required">
+        <%= f.label :website %> <br/>
+        <%= f.text_field :website %>
+      </li>
+      <li class="required">
+        <%= f.label :owner %> <br/>
+        <%= f.text_field :owner %>
+      </li>
+      <li class="required">
+        <%= f.label :capacity %> <br/>
+        <%= f.text_field :capacity %>
+      </li>
+      <li class="required">
+        <%= f.label :status %> <br/>
+        <%= f.text_field :status %>
+      </li>
+      <li>
+        <%= f.label :image_file_name %> <br/>
+        <%= f.text_field :image_file_name %>
+      </li>
+    </ol>
+    <p>
+      <%= f.submit %> | <%= link_to "Cancel", houses_path %>
+    </p>
+  </fieldset>
 <% end %>

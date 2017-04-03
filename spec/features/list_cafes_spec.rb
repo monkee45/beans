@@ -8,7 +8,6 @@ describe "Viewing the list of cafes" do
 
     visit houses_url
 
-    expect(page).to have_text("3 Cafes")
     expect(page).to have_text(cafe1.name)
     expect(page).to have_text(cafe2.name)
     expect(page).to have_text(cafe3.name)
