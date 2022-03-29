@@ -24,8 +24,8 @@ class HousesController < ApplicationController
 
   def create
     @cafe = House.new(cafe_params)
-    @cafe.save
-    redirect_to house_path(@cafe)
+    @cafe.save!
+    redirect_to house_path(@cafe), notice: "Cafe successfully created!"
   end
 
   def destroy
