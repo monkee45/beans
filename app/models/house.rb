@@ -1,6 +1,6 @@
 class House < ApplicationRecord
 
-  validates :name, :description, :address, :phone, :owner, :image_file_name, :website, :capacity, presence: true
+  validates :name, :description, :address, :phone, :owner, :website, :capacity, presence: true
   validates :description, length: { minimum: 25}
   validates :name, uniqueness: true
   validates :capacity, numericality: { greater_than_or_equal_to: 0 }
