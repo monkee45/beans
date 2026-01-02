@@ -10,20 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[6.1].define(version: 2017_03_27_033133) do
-
+ActiveRecord::Schema[8.1].define(version: 2017_03_27_033133) do
   create_table "houses", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
     t.string "address"
-    t.string "phone"
-    t.string "website"
-    t.string "owner"
     t.integer "capacity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text "status"
+    t.datetime "created_at", precision: nil, null: false
+    t.string "description"
     t.string "image_file_name", default: ""
+    t.string "name"
+    t.string "owner"
+    t.string "phone"
+    t.text "status"
+    t.datetime "updated_at", precision: nil, null: false
+    t.string "website"
   end
-
 end
