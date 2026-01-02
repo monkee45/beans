@@ -1,6 +1,6 @@
 /* FORMS */
 
-@import "colors";
+@use "colors" as *;
 
 fieldset {
   margin: 0 0 10px 0;
